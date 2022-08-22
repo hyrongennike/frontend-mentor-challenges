@@ -111,3 +111,13 @@ a {
   background-color: #eeeeee;
   border-radius: 20px;
 }
+
+@media (max-width: 580px) {
+  #projects h1 {
+    font-size: 2.2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
