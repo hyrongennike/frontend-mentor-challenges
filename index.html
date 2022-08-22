@@ -4,23 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor Submissions</title>
   </head>
   <body>
     <main id="projects">
       <div class="container">
-        <h1>Frontend Mentor Submissions</h1>
+        <header>
+          <h1>Frontend Mentor Submissions</h1>
+          <a
+            href="https://github.com/hyrongennike/frontend-mentor-challenges"
+            target="_blank"
+            class="btn btn-dark"
+            >View Code On GitHub</a
+          >
+        </header>
+
         <div class="project-grid">
           <div class="project-card">
-            <img
-              src="/qr-code-component/design/desktop-design.jpg"
-              alt="project card image"
-            />
-            <div>
+            <div class="project-card-img">
+              <a href="/qr-code-component/index.html">
+                <img
+                  src="/qr-code-component/design/desktop-design.jpg"
+                  alt="project card image"
+                />
+              </a>
+            </div>
+            <div class="project-card-content">
               <h2 class="project-card-title">
                 <a href="/qr-code-component/index.html">QR Code Component</a>
               </h2>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
             </div>
           </div>
         </div>
