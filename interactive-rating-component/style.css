@@ -1,0 +1,163 @@
+:root {
+  --prmiary: hsl(25, 97%, 53%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 20%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: var(--very-dark-blue);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: var(--medium-grey);
+  text-decoration: none;
+}
+
+p {
+  color: var(--medium-grey);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* Rating Card */
+.card {
+  max-width: 380px;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 20px;
+  background: hsla(213, 20%, 18%, 1);
+  background: radial-gradient(
+    circle,
+    hsla(213, 20%, 18%, 1) 18%,
+    hsla(215, 21%, 12%, 1) 50%,
+    hsla(215, 21%, 11%, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: 44% 94%;
+  background-size: 200% 250%;
+}
+
+.rating-card-icon img {
+  vertical-align: middle;
+}
+
+.card h1 {
+  margin: 1rem 0;
+}
+
+.card p {
+  color: var(--medium-grey);
+}
+
+#ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  pointer-events: none;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.rating-value {
+  pointer-events: all;
+}
+
+.rating-value:hover,
+.rating-value:focus {
+  background-color: var(--prmiary);
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 0;
+  text-align: center;
+  background-color: var(--prmiary);
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn:hover,
+.btn-focus {
+  background-color: #fff;
+  color: var(--prmiary);
+}
+
+/* Rating Success Card */
+#rating-success {
+  text-align: center;
+  padding: 2.42rem;
+}
+
+#rating-success .rating-result {
+  color: var(--prmiary);
+  padding: 0.4rem 1.5rem;
+  background-color: var(--dark-blue);
+  width: max-content;
+  line-height: 1.8;
+  margin: 1.5rem auto 1rem;
+  border-radius: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.selected,
+.rating-value.selected:hover {
+  background-color: var(--light-grey);
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .card {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+}
