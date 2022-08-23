@@ -1,0 +1,108 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+.bg-bo {
+  background-color: var(--bright-orange);
+}
+.bg-dc {
+  background-color: var(--dark-cyan);
+}
+.bg-vdc {
+  background-color: var(--very-dark-cyan);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Big Shoulders Display", cursive;
+  color: hsl(0, 0%, 95%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.car-types {
+  max-width: 980px;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.car-preview {
+  padding: 2.8rem 3.2rem;
+}
+
+.car-preview h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 5rem;
+  background-color: #fff;
+  padding: 0.8rem 1.8rem;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  transition: 0.3s ease;
+}
+
+.bg-bo .btn {
+  color: var(--bright-orange);
+}
+.bg-dc .btn {
+  color: var(--dark-cyan);
+}
+.bg-vdc .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover,
+.btn:focus {
+  background: transparent;
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  .car-preview {
+    padding: 2.8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .car-types {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-top: 2rem;
+  }
+}

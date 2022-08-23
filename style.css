@@ -65,6 +65,7 @@ a {
   position: relative;
   z-index: 1;
   transition: 0.4s ease;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 9px 25px 0px;
 }
 
 .project-card-img a {
