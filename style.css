@@ -19,7 +19,7 @@ a {
 
 .container {
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
 .btn {
@@ -38,7 +38,6 @@ a {
 #projects {
   padding: 2rem;
   background-color: #f4f4f4;
-  height: 100vh;
 }
 
 #projects header {
@@ -55,7 +54,7 @@ a {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 3rem;
 }
 
 .project-card-img {
