@@ -5,7 +5,10 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: #adadad;
+  background-color: #f7f7f7;
 }
 
 img {
@@ -15,6 +18,13 @@ img {
 a {
   color: #333;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #3b3b3b;
 }
 
 .container {
@@ -31,13 +41,14 @@ a {
 }
 
 .btn-dark {
-  background-color: #333;
+  display: inline-block;
+  background-color: #3b3b3b;
   color: #fff;
+  margin-top: 1.5rem;
 }
 
 #projects {
   padding: 2rem;
-  background-color: #f4f4f4;
 }
 
 #projects header {
@@ -47,8 +58,22 @@ a {
 
 #projects h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 1rem;
+}
+
+#projects h1 span {
+  color: #adadad;
+}
+
+#projects header p a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#projects header p a:hover {
+  color: #adadad;
+  text-decoration: none;
 }
 
 .project-grid {
@@ -93,9 +118,18 @@ a {
 }
 
 .project-card .project-card-content h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-top: 0.5rem;
+}
+
+.project-card-content p {
+  color: #adadad;
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
 }
 
 .project-card .tags {
@@ -105,12 +139,20 @@ a {
 }
 
 .project-card .tags li {
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
   color: rgb(85, 85, 85);
   padding: 0.3rem 0.8rem;
   margin-right: 0.5rem;
   background-color: #eeeeee;
   border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 @media (max-width: 580px) {

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(224, 23%, 55%);
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  line-height: 1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(225, 100%, 94%) url("images/pattern-background-desktop.svg")
+    no-repeat center -20% / contain;
+}
+
+.order-card {
+  width: 420px;
+  margin: 1.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+.order-card-content {
+  padding: 2.4rem;
+  text-align: center;
+}
+
+.order-card-content h1 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.order-card-content > p {
+  margin-bottom: 1.3rem;
+}
+
+.order-card-plan {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  background-color: hsl(225, 100%, 98%);
+}
+
+.order-card-pricing {
+  text-align: left;
+  flex: 1;
+}
+
+.order-card-plan h3 {
+  font-size: 16px;
+  margin-bottom: 0.2rem;
+}
+
+.order-card-plan > a {
+  justify-self: flex-end;
+}
+
+.order-card-plan > a:hover,
+.order-card-plan > a:focus {
+  color: hsl(245, 75%, 68%);
+}
+
+.order-card .card-icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.order-card-content a {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.order-card-content .btn {
+  display: inline-block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: hsl(245deg 75% 82%) 0px 8px 17px;
+}
+
+.order-card-content .btn:hover,
+.order-card-content .btn:focus {
+  background-color: hsl(245, 75%, 68%);
+}
+
+.order-card-content .cancel-btn {
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+}
+
+.order-card-content .cancel-btn:hover,
+.order-card-content .cancel-btn:focus {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 640px) {
+  main {
+    background: url("images/pattern-background-mobile.svg") no-repeat center
+      center / cover;
+  }
+}
