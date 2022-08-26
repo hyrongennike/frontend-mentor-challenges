@@ -1,0 +1,187 @@
+:root {
+  --primary-color: hsl(179, 62%, 43%);
+  --dark-primar-color: hsl(179, 62%, 38%);
+  --secondary-color: hsl(71, 73%, 54%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Padding */
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 2.5rem;
+}
+.p-5 {
+  padding: 2.8rem;
+}
+
+/* Margin */
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-primary-dark {
+  background-color: var(--dark-primar-color);
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+  color: inherit;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+
+.btn:hover {
+  background-color: hsl(71, 73%, 44%);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-light {
+  color: hsl(204, 43%, 93%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(218, 22%, 67%);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Price Grid */
+
+#price-grid {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+  max-width: 750px;
+  display: grid;
+  grid-template-areas:
+    "community community"
+    "subscription benefits";
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.price-grid-community {
+  grid-area: community;
+}
+
+.price-grid-community h1 {
+  font-size: 1.6rem;
+}
+
+.price-grid-sub {
+  grid-area: subscription;
+}
+
+.price-grid-sub h2,
+.price-grid-benefits h2 {
+  font-size: 1.2rem;
+}
+
+.price-grid-sub .price {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.price-grid-sub .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  opacity: 0.5;
+}
+
+.price-grid-benefits {
+  grid-area: benefits;
+  padding-right: 8rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    display: block;
+  }
+
+  .p-5 {
+    padding: 1.8rem;
+  }
+}
