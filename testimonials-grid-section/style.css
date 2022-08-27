@@ -135,7 +135,10 @@ h2.testimonial-title {
 
 .bg-md h2,
 .bg-blackish-blue h2,
-.bg-grayish-blue h2 {
+.bg-grayish-blue h2,
+.bg-md .name,
+.bg-blackish-blue .name,
+.bg-grayish-blue .name {
   color: hsl(210, 46%, 95%);
 }
 .testimonial-card .testimonial-user-info .verified {
