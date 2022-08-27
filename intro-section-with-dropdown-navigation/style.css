@@ -13,6 +13,7 @@
 body {
   font-family: "Epilogue", sans-serif;
   color: var(--medium-gray);
+  background-color: var(--off-white);
 }
 
 img {
