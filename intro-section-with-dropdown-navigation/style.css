@@ -1,0 +1,390 @@
+:root {
+  --off-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  color: var(--medium-gray);
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--medium-gray);
+}
+
+a:hover {
+  color: var(--black);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--black);
+  line-height: normal;
+}
+
+/* Utility */
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.btn-outline {
+  border: 2px solid var(--medium-gray);
+}
+
+.btn-outline:hover {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.btn-dark {
+  background-color: var(--black);
+  color: var(--off-white);
+  font-weight: bold;
+}
+
+.btn-dark:hover {
+  border: 2px solid var(--black);
+  color: var(--black);
+  background: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Container */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Nav Bar */
+#nav-bar {
+  height: 80px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.nav-bar-menus {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  max-width: 100px;
+  margin-top: 0.5rem;
+}
+
+.menu-left {
+  flex-grow: 1;
+  margin-left: 4rem;
+}
+
+.menu-left button i {
+  font-size: 0.7rem;
+  padding-left: 0.3rem;
+}
+
+/* Dropdown Menu */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.link {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: var(--black);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0px;
+  top: calc(100% + 1rem);
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out 0s, transform 150ms ease-in-out 0s;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dropdown-menu a.link:last-child {
+  margin: 0;
+}
+
+.dropdown-menu .link {
+  font-size: 14px;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: max-content;
+}
+
+.dropdown-menu .link img {
+  width: 15px;
+}
+
+/* Hero */
+#hero {
+  width: 80%;
+  padding: 0 1rem;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-gap: 5%;
+  align-items: flex-end;
+}
+
+#hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+#hero p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  max-width: 70%;
+}
+
+#hero .hero-image {
+  background-image: url("images/image-hero-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 100%;
+  min-height: 580px;
+  margin: 0 auto;
+}
+
+/* Clients */
+.clients {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5.5rem;
+}
+
+.clients img {
+  width: 90px;
+}
+
+@media (max-width: 768px) {
+  /* Nav */
+  #nav-bar {
+    position: relative;
+    padding: 0 1rem;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .mobile-menu-toggle {
+    position: absolute;
+    right: 1rem;
+    z-index: 9999;
+    display: block;
+    border: none;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    background: url("images/icon-menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] {
+    background: url("images/icon-close-menu.svg") no-repeat;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .nav-bar-menus,
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 59%;
+    height: 100%;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--off-white);
+    transform: translateX(100%);
+    transition: 350ms ease-out;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] + .overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 350ms ease 300ms;
+  }
+
+  .mobile-nav[data-visible="true"] {
+    transform: translateX(0);
+  }
+
+  .menu-left {
+    flex-grow: 0;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .menu-right {
+    width: 100%;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .menu-right .flex-row {
+    align-items: center;
+  }
+
+  .dropdown,
+  .menu-right .flex-row li,
+  .menu-right .flex-row li a {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    height: 0;
+    padding: 0;
+    transition: none;
+  }
+
+  .dropdown-menu .link {
+    font-size: 16px;
+  }
+
+  .dropdown.active > .link + .dropdown-menu {
+    height: auto;
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  /* Hero */
+  #hero .hero-image {
+    background-image: url("images/image-hero-mobile.png");
+    min-height: 320px;
+    order: -1;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  #hero {
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0;
+    margin-top: -1rem;
+  }
+
+  #hero h1 br {
+    display: none;
+  }
+
+  #hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #hero p {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .clients img {
+    width: 64px;
+  }
+}

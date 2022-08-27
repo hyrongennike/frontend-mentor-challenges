@@ -119,7 +119,7 @@ h4 {
 }
 
 .project-card .project-card-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -130,7 +130,7 @@ h4 {
 .project-card-content p {
   color: #adadad;
   font-size: 0.9rem;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
 }
 
 .project-card .tags {
