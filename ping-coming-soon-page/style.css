@@ -139,6 +139,7 @@ span.error {
   width: 30px;
   height: 30px;
   line-height: 30px;
+  margin-right: 5px;
   border: 1px solid hsl(0, 0%, 90%);
   border-radius: 50%;
 }
