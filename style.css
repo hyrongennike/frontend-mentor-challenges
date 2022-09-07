@@ -102,6 +102,7 @@ h4 {
 .project-card-img img {
   height: 240px;
   object-fit: cover;
+  object-position: top;
 }
 
 .project-card:hover .project-card-img {
